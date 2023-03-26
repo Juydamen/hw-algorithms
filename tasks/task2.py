@@ -20,3 +20,7 @@ inputs = [
 ]
 
 # тут ваше решение:
+for i in inputs:
+    d = i.split(' ')
+    s = [True if int(d[j]) % 2 == 0 else False for j in range(len(d))]
+    print('WIN' if len(set(s)) == 1 else 'FAIL')

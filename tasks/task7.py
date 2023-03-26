@@ -21,3 +21,15 @@ inputs = [
 ]
 
 # тут ваше решение:
+
+for i in inputs:
+    s = i[0]
+    t = i[1]
+    for j in t:
+        if t.count(j) > 1 and s.count(j) == 1:
+            print(j)
+            break
+        elif s.count(j) == 0:
+            print(j)
+            
+        

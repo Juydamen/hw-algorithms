@@ -23,3 +23,10 @@ inputs = [
 ]
 
 # тут ваше решение:
+for j in inputs:
+    d = ''.join([i.lower() for i in j if i.isalnum()])
+    s = ''.join(reversed(d))
+    if d == s:
+        print(True)
+    else:
+        print(False)
