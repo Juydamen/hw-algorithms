@@ -31,5 +31,3 @@ for i in inputs:
             break
         elif s.count(j) == 0:
             print(j)
-            
-        

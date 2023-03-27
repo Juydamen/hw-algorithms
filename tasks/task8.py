@@ -25,3 +25,18 @@ inputs = [
 ]
 
 # тут ваше решение:
+out = 0
+d = ''
+for i in inputs:
+    out = int(i)
+    print(out)
+    if len(i) == 1:
+        print()
+    while out // 2 > 1 and out % 2 == 0 or out // 2 == 1:
+        out = out // 2
+        d += '2 '
+    print(d)
+    while out // 5 > 1 or out // 5 == 1:
+        out = out // 5
+        d += '5 '
+# fix

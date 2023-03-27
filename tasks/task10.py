@@ -18,3 +18,8 @@ inputs = [
 ]
 
 # тут ваше решение:
+
+for i in inputs:
+    out = ''
+    k = list(reversed(sorted(i.split(" "))))
+    print("".join([out + i for i in k]))
