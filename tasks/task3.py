@@ -29,6 +29,7 @@ inputs = [
 
 # тут ваше решение:
 
+
 def random_calculation(n, inp):
     q = 0
     if n == 1:
@@ -42,10 +43,11 @@ def random_calculation(n, inp):
             q += 1
     return q
 
+
 for i in inputs:
     n = int(i[0])
     inp = list(map(int, i[1].split()))
     print(random_calculation(n, inp))
 
-    
+
 print('Hello World')

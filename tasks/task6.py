@@ -30,8 +30,6 @@ for i in inputs:
 
 print([True if int(i) % 4 == 0 else False for i in inputs if int(i) % 4 == 0 ])
 
-
-
 for input in inputs:
     n = int(input)
     sqrt = n ** (0.25)
