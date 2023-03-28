@@ -31,20 +31,15 @@ inputs = [
 
 def random_calculation(n, inp):
     q = 0
-
     if n == 1:
         return 1
-
     for j in range(n):
         if j == 0 and inp[j] > inp[j + 1]:
             q += 1
-
         elif j == n - 1 and (inp[j - 1] < inp[j]):
             q += 1
-
         elif inp[j - 1] < inp[j] > inp[j + 1]:
             q += 1
-
     return q
 
 for i in inputs:
