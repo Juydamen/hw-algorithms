@@ -46,3 +46,6 @@ for i in inputs:
     n = int(i[0])
     inp = list(map(int, i[1].split()))
     print(random_calculation(n, inp))
+
+    
+print('Hello World')
