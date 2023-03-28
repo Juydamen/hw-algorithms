@@ -27,3 +27,15 @@ inputs = [
 
 for i in inputs:
     print(True if int(i) % 4 == 0 else False)
+
+print([True if int(i) % 4 == 0 else False for i in inputs if int(i) % 4 == 0 ])
+
+
+
+for input in inputs:
+    n = int(input)
+    sqrt = n ** (0.25)
+    if n == 1 or n == 4 or sqrt % 2 == 0:
+        print(True)
+    else:
+        print(False)
