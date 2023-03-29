@@ -34,3 +34,29 @@ inputs = [
 ]
 
 # тут ваше решение:
+
+for i in inputs:
+    # print(i)
+    # print(list(reversed(sorted(i))))
+    m = [j.split(" ") for j in i]
+    print(m)
+    s = ''
+    for j in range(len(m)):
+        # [['7', '8'], ['7', '8'], ['2', '3'], ['6', '10']]
+        # [['2', '3'], ['5', '6'], ['3', '4'], ['3', '4']]
+        # [['1', '3'], ['3', '5'], ['4', '6'], ['5', '6'], ['2', '4'], ['7', '10']]
+        if m[j[0]] == m[j[0] + 1] and m[j[1]] > m[j[1] + 1]:
+            s += 
+
+    # m = []
+    # s = ''
+    # for j in i:
+    #     n = j.split(" ")
+    #     m.append(int(n[0]))
+    #     m.append(int(n[1]))
+    # m = sorted(m)
+    # n = len(m)
+    # print(m)
+    # print()
+    
+    

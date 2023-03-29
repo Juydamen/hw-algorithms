@@ -25,18 +25,19 @@ inputs = [
 ]
 
 # тут ваше решение:
-out = 0
-d = ''
+
+
+def factors(n):
+    s = [2, 3, 4, 5, 6, 7, 8, 9]
+    d = ''
+    if n % 2 != 0:
+        return n
+    for i in s:
+        while n % i == 0:
+            n = n // i
+            d = d + str(i) + " "
+    return d
+
+
 for i in inputs:
-    out = int(i)
-    print(out)
-    if len(i) == 1:
-        print()
-    while out // 2 > 1 and out % 2 == 0 or out // 2 == 1:
-        out = out // 2
-        d += '2 '
-    print(d)
-    while out // 5 > 1 or out // 5 == 1:
-        out = out // 5
-        d += '5 '
-# fix
+    print(factors(int(i)))

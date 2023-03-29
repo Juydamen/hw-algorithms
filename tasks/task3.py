@@ -28,3 +28,23 @@ inputs = [
 ]
 
 # тут ваше решение:
+
+
+def inpuT(n, m):
+    q = 0
+    if n == 1:
+        return 1
+    for i in range(n):
+        if i == 0 and m[i] > m[i + 1]:
+            q += 1
+        elif i == n - 1 and m[i] > m[i - 1]:
+            q += 1
+        elif m[i - 1] < m[i] > m[i + 1]:
+            q += 1
+    return q
+
+
+for i in inputs:
+    n = int(i[0])
+    m = list(map(int, i[1].split()))
+    print(inpuT(n, m))
