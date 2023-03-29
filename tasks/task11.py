@@ -35,28 +35,66 @@ inputs = [
 
 # тут ваше решение:
 
-for i in inputs:
-    # print(i)
-    # print(list(reversed(sorted(i))))
-    m = [j.split(" ") for j in i]
-    print(m)
-    s = ''
-    for j in range(len(m)):
-        # [['7', '8'], ['7', '8'], ['2', '3'], ['6', '10']]
-        # [['2', '3'], ['5', '6'], ['3', '4'], ['3', '4']]
-        # [['1', '3'], ['3', '5'], ['4', '6'], ['5', '6'], ['2', '4'], ['7', '10']]
-        if m[j[0]] == m[j[0] + 1] and m[j[1]] > m[j[1] + 1]:
-            s += 
 
-    # m = []
-    # s = ''
-    # for j in i:
-    #     n = j.split(" ")
-    #     m.append(int(n[0]))
-    #     m.append(int(n[1]))
-    # m = sorted(m)
-    # n = len(m)
-    # print(m)
-    # print()
-    
-    
+# def clumba(n):
+#     e = []
+#     for j in n:
+#         e.append([int(i) for i in j.split(" ")])
+#     q = [e[i] for i in range(len(e)) if e[i] not in e[i + 1:]]
+#     print(q)
+#     i = 0
+#     while 1:
+#         if 
+
+# print(clumba(['2 3', '3 4', '5 6', '3 4']))
+
+#Example 1
+# def sort_key(array):
+#     return array[1]
+
+
+# for input in inputs:
+#     n = len(input)
+#     coordinates_string = [num.split() for num in input]
+#     coordinates = []
+#     for coordinate in coordinates_string:
+#         coordinate = list(map(int, coordinate))
+#         coordinates.append(coordinate)
+#     coordinates = sorted(coordinates, key=sort_key)
+
+#     k = n - 1
+#     while k > 0:
+#         if coordinates[k][0] >= coordinates[k - 1][0] \
+#                 and coordinates[k][1] >= coordinates[k - 1][1] \
+#                 and coordinates[k][0] <= coordinates[k - 1][1]:
+#             coordinates[k][0] = coordinates[k - 1][0]
+#             coordinates.pop(k - 1)
+#         elif coordinates[k][0] <= coordinates[k - 1][0] \
+#                 and coordinates[k][1] >= coordinates[k - 1][1]:
+#             coordinates.pop(k - 1)
+#         elif coordinates[k][0] >= coordinates[k - 1][0] \
+#                 and coordinates[k][1] <= coordinates[k - 1][1]:
+#             coordinates.pop(k)
+#         k -= 1
+
+#     for coordinate in coordinates:
+#         print((' '.join(list(map(str, coordinate)))))
+#     print()
+
+#Example 2
+def merge_intervals(intervals):
+    intervals = sorted(intervals)
+    result = [intervals[0]]
+    for interval in intervals[1:]:
+        if interval[0] <= result[-1][1]:
+            result[-1] = (result[-1][0], max(result[-1][1], interval[1]))
+        else:
+            result.append(interval)
+    return result
+
+
+for ints in inputs:
+    intervals = [list(map(int, n.split())) for n in ints]
+    intervals = merge_intervals(intervals)
+    for interval in intervals:
+        print(interval[0], interval[1])
